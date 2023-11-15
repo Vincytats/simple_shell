@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * strtow - splits a string into words. Repeat delimiters are ignored
+ * **strtow - splits a string into words. Repeat delimiters are ignored
  * @str: the input string
  * @d: the delimeter string
  * Return: a pointer to an array of strings, or NULL on failure
@@ -20,7 +20,7 @@ if (!is_delim(str[i], d) && (is_delim(str[i + 1], d) || !str[i + 1]))
 numwords++;
 if (numwords == 0)
 return (NULL);
-s = malloc((1 + numwords) * sizeof(char *));
+s = malloc((1 + numwords) *sizeof(char *));
 if (!s)
 return (NULL);
 for (i = 0, j = 0; j < numwords; j++)
@@ -35,7 +35,8 @@ if (!s[j])
 {
 for (k = 0; k < j; k++)
 free(s[k]);
-free(s);return (NULL);
+free(s);
+return (NULL);
 }
 for (m = 0; m < k; m++)
 s[j][m] = str[i++];
@@ -63,7 +64,7 @@ if ((str[i] != d && str[i + 1] == d) ||
 numwords++;
 if (numwords == 0)
 return (NULL);
-s = malloc((1 + numwords) * sizeof(char *));
+s = malloc((1 + numwords) *sizeof(char *));
 if (!s)
 return (NULL);
 for (i = 0, j = 0; j < numwords; j++)
