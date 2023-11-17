@@ -1,12 +1,12 @@
 #include "shell.h"
 
 /**
- * add_rvar_node - 
- * @head: 
- * @lvar: 
- * @val: 
- * @lval: 
- * Return: 
+ * add_rvar_node - adds a variable node to a linked list
+ * @head: pointer to the head of the linked list
+ * @lvar: string representing local variable name
+ * @val: string representing the variables value
+ * @lval: string representinglocal variable value
+ * Return: void
  */
 r_var *add_rvar_node(r_var **head, int lvar, char *val, int lval)
 {
@@ -33,9 +33,9 @@ return (*head);
 }
 
 /**
- * free_rvar_list - 
- * @head: 
- * Return: 
+ * free_rvar_list - frees the memory allocated for a linked list
+ * @head: pointer to the head of the linked list
+ * Return: void
  */
 void free_rvar_list(r_var **head)
 {

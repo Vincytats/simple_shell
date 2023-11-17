@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * aux_help - 
- * Return:
+ * aux_help - displays the help message for a specific command
+ * Return:void
  */
 void aux_help(void)
 {
@@ -14,8 +14,8 @@ help = "Displays brief summaries of builtin commands.\n";
 write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * aux_help_alias - 
- * Return: 
+ * aux_help_alias - displays the help message for the alias command
+ * Return: void
  */
 void aux_help_alias(void)
 {
@@ -25,8 +25,8 @@ help = "\tDefine or display aliases.\n ";
 write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * aux_help_cd - 
- * Return: 
+ * aux_help_cd - displays help message for the cd command
+ * Return: void
  */
 void aux_help_cd(void)
 {

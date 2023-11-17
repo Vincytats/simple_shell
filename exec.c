@@ -1,10 +1,9 @@
 #include "shell.h"
 
 /**
- * exec_line - 
- *
- * @datash: 
- * Return: 
+ * exec_line - executes a line of input
+ * @datash: data structure containing information about shell
+ * Return: void
  */
 int exec_line(data_shell *datash)
 {

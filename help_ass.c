@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * get_help - function
- * @datash: data structure
+ * get_help - displays help message for the shell
+ * @datash: data structure containing information about shell
  * Return: void
 */
 int get_help(data_shell *datash)

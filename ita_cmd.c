@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * is_cdir - function
- * @path: path
- * @i: information
+ * is_cdir - checks if a path refers to the current directory
+ * @path: path to be checked
+ * @i: information about directory
  * Return: void
  */
 int is_cdir(char *path, int *i)
@@ -20,9 +20,9 @@ return (0);
 }
 
 /**
- * _which - function
- * @cmd: command
- * @_environ: environment
+ * _which - locates the executable for a given command
+ * @cmd: command to locate
+ * @_environ: environment variables
  * Return: void
  */
 char *_which(char *cmd, char **_environ)
@@ -68,9 +68,9 @@ return (NULL);
 }
 
 /**
- * is_executable - function
- * @datash: data in a shell
- * Return: 0
+ * is_executable - checks if command is executable
+ * @datash: data structure
+ * Return: 0 if the command is executable
  */
 int is_executable(data_shell *datash)
 {
@@ -110,9 +110,9 @@ return (-1);
 }
 
 /**
- * check_error_cmd - function
- * @dir: directory
- * @datash: data in a shell
+ * check_error_cmd - checks for errors in a command
+ * @dir: directory where the command is executed
+ * @datash: data structure
  * Return: void
  */
 int check_error_cmd(char *dir, data_shell *datash)
@@ -144,8 +144,8 @@ return (0);
 }
 
 /**
- * cmd_exec - function
- * @datash: data in a shell
+ * cmd_exec - executes a command in shell
+ * @datash: data structure containing information about shell
  * Return: void
  */
 int cmd_exec(data_shell *datash)

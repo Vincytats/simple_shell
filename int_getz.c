@@ -1,8 +1,9 @@
 #include "shell.h"
 
 /**
- * get_sigint - function
- * @sig: Return
+ * get_sigint - handles the SIGINT signal
+ * @sig: signal number
+ * Return: void
  */
 void get_sigint(int sig)
 {

@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * get_error - 
- * @datash: 
- * @eval: 
- * Return: 
+ * get_error - retrieve error message based on exit status
+ * @datash: data structure containing information about shell
+ * @eval: exit status to retrieve an error message
+ * Return: a pointer to error message
  */
 int get_error(data_shell *datash, int eval)
 {

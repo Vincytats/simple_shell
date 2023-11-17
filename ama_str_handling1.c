@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _strdup - duplicates a string 
+ * _strdup - duplicates a string
  * @s: the string
  * Return: Return 0
  */
@@ -73,12 +73,12 @@ if (str != NULL)
 {
 if (cmp_chars(str, delim))
 return (NULL);
-splitted = str; 
+splitted = str;
 i = _strlen(str);
-str_end = &str[i]; 
+str_end = &str[i];
 }
 str_start = splitted;
-if (str_start == str_end) 
+if (str_start == str_end)
 return (NULL);
 for (bool = 0; *splitted; splitted++)
 {
@@ -95,16 +95,16 @@ str_start++;
 break;
 }
 }
-if (bool == 0 && *splitted) 
+if (bool == 0 && *splitted)
 bool = 1;
 }
-if (bool == 0) 
+if (bool == 0)
 return (NULL);
 return (str_start);
 }
 
 /**
- * _isdigit - Checks character if its a digit 
+ * _isdigit - Checks character if its a digit
  *
  * @s: the character to check
  * Return: 1 if a digit, 0 otherwise

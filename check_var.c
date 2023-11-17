@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * repeated_char - 
- * @input: 
- * @i: 
- * Return: 
+ * repeated_char - check if a character is repeated in a string
+ * @input: the string to check repeated characters
+ * @i:  index of a character
+ * Return: 1 if the character is repeated, 0 otherwise
  */
 int repeated_char(char *input, int i)
 {
@@ -14,11 +14,11 @@ return (i);
 }
 
 /**
- * error_sep_op - 
- * @input: 
- * @i: 
- * @last: 
- * Return: 
+ * error_sep_op - checks for errors
+ * @input: the string containing command and operators
+ * @i: index of current character
+ * @last: index of last character
+ * Return: 1 if there is an error, 0 otherwise
  */
 int error_sep_op(char *input, int i, char last)
 {
@@ -57,10 +57,10 @@ return (error_sep_op(input + 1, i + 1, *input));
 }
 
 /**
- * first_char - 
- * @input: 
- * @i:
- * Return: 
+ * first_char - finds the first non-space character
+ * @input: string to search for the first non-space character
+ * @i:index to start searching from
+ * Return: index of first non-space character, -1 if not found
  */
 int first_char(char *input, int *i)
 {
@@ -76,12 +76,12 @@ return (0);
 }
 
 /**
- * print_syntax_error - 
- * @datash: 
- * @input: 
- * @i: 
- * @bool: 
- * Return: 
+ * print_syntax_error - print syntax error message
+ * @datash: data structure containing information about the shell
+ * @input: input string where syntax error ocurred
+ * @i: index in the input string
+ * @bool: condition determining which syntax error message to print
+ * Return: void
  */
 void print_syntax_error(data_shell *datash, char *input, int i, int bool)
 {
@@ -122,10 +122,10 @@ free(counter);
 }
 
 /**
- * check_syntax_error - 
- * @datash: 
- * @input: 
- * Return: 
+ * check_syntax_error - check for syntax error in a string
+ * @datash: data structure containing information about shell
+ * @input: input string to check for syntax error
+ * Return: 1 if there is syntax error, 0 otherwise
  */
 int check_syntax_error(data_shell *datash, char *input)
 {

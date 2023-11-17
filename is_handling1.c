@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * add_sep_node_end -  function
- * @head: head
+ * add_sep_node_end -  adds a separator node at the end of linked list
+ * @head: pointer to the head of the linked list
  * @sep:  ; | &
  * Return: void
  */
@@ -29,8 +29,8 @@ return (*head);
 }
 
 /**
- * free_sep_list - function
- * @head: head
+ * free_sep_list - frees the memory allocated for a linked list
+ * @head: pointer to the head of the linked list
  * Return: void
  */
 void free_sep_list(sep_list **head)
@@ -50,9 +50,9 @@ free(temp);
 }
 
 /**
- * add_line_node_end - function
- * @head: head
- * @line: line
+ * add_line_node_end - adds a line node at the end of a linked list
+ * @head: pointer to the head of the linked list
+ * @line: string representing the line to be added
  * Return: void
  */
 line_list *add_line_node_end(line_list **head, char *line)
@@ -78,8 +78,8 @@ return (*head);
 }
 
 /**
- * free_line_list - function
- * @head: head
+ * free_line_list - frees the memory allocated for a linked list
+ * @head: pointer to the head of linked list
  * Return: void
  */
 void free_line_list(line_list **head)

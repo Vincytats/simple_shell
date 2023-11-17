@@ -1,11 +1,10 @@
 #include "shell.h"
 
 /**
- * copy_info - 
- * @name: 
- * @value: 
- *
- * Return: 
+ * copy_info - copies information from one source to another
+ * @name: the name of the information to copy
+ * @value: value associated with information
+ * Return: void
  */
 char *copy_info(char *name, char *value)
 {
@@ -23,12 +22,11 @@ return (new);
 }
 
 /**
- * set_env - 
- *
- * @name: 
- * @value: 
- * @datash: 
- * Return: 
+ * set_env - sets the value of an environment variable
+ * @name: name of environment variable
+ * @value: value to set for the environment variable
+ * @datash: data structure containing information about shell
+ * Return: void
  */
 void set_env(char *name, char *value, data_shell *datash)
 {
@@ -53,30 +51,25 @@ datash->_environ[i + 1] = NULL;
 }
 
 /**
- * _setenv - 
- * @datash: 
- *
- * Return: 
+ * _setenv - sets the value of an environment variable
+ * @datash: data structure containing information about shell
+ * Return: void
  */
 int _setenv(data_shell *datash)
 {
-
-	if (datash->args[1] == NULL || datash->args[2] == NULL)
-	{
-		get_error(datash, -1);
-		return (1);
-	}
-
-	set_env(datash->args[1], datash->args[2], datash);
+if (datash->args[1] == NULL || datash->args[2] == NULL)
+{
+get_error(datash, -1);
+return (1);
+}
+set_env(datash->args[1], datash->args[2], datash);
 return (1);
 }
 
 /**
- * _unsetenv - 
- *
- * @datash: 
- *
- * Return: 
+ * _unsetenv - unsets an environment
+ * @datash: data structure containing information about shell
+ * Return: void
  */
 int _unsetenv(data_shell *datash)
 {

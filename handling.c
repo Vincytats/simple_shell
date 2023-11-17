@@ -1,12 +1,11 @@
 #include "shell.h"
 
 /**
- * _memcpy - 
- * @newptr: 
- * @ptr: 
- * @size: 
- *
- * Return: 
+ * _memcpy - size bytes
+ * @newptr: pointer to the destination memory area
+ * @ptr: pointer to the source memory area
+ * @size: number of bytes to copy
+ * Return: a pointer to the destination memory area
  */
 void _memcpy(void *newptr, const void *ptr, unsigned int size)
 {
@@ -18,16 +17,15 @@ char_newptr[i] = char_ptr[i];
 }
 
 /**
- * _realloc - 
- * @ptr: 
- * @old_size: 
- * @new_size: 
- *
- * Return: 
+ * _realloc - reallocates memory block
+ * @ptr: pointer to the previously allocated memory
+ * @old_size: size of old memory block
+ * @new_size: size of new memory block
+ * Return: pointer to the reallocated memory
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *newptr;
+void *newptr;
 if (ptr == NULL)
 return (malloc(new_size));
 if (new_size == 0)
@@ -49,12 +47,11 @@ return (newptr);
 }
 
 /**
- * _reallocdp - 
- * @ptr:
- * @old_size: 
- * @new_size: 
- *
- * Return: 
+ * _reallocdp - reallocates a memory block for a pointer to pointer
+ * @ptr:pointer to the previously allocated memory
+ * @old_size: size of the old memory block
+ * @new_size: size of new memory block
+ * Return: a pointer to reallocated memory
  */
 char **_reallocdp(char **ptr, unsigned int old_size, unsigned int new_size)
 {

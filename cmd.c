@@ -1,9 +1,8 @@
 #include "shell.h"
 
 /**
- * read_line - function
- *
- * @i_eof: number
+ * read_line - reads a line of input from user
+ * @i_eof: a flag indicating whether the end of the file has been reached
  * Return: void
  */
 char *read_line(int *i_eof)

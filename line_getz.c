@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * bring_line - function
- * @lineptr: line
- * @buffer: buffer
- * @n: number
- * @j: number
+ * bring_line - brings a line to buffer
+ * @lineptr: pointer to the line buffer
+ * @buffer: buffer to store the line
+ * @n: number of characters in line bufer
+ * @j: number of specifying some information about the line
  */
 void bring_line(char **lineptr, size_t *n, char *buffer, size_t j)
 {
@@ -32,10 +32,10 @@ free(buffer);
 }
 }
 /**
- * get_line -function 
- * @lineptr: line
- * @n: number
- * @stream: stream
+ * get_line -reads a line from a stream
+ * @lineptr: pointer to the line buffer
+ * @n: number of characters to read
+ * @stream: stream from which to read the line
  * Return: void
  */
 ssize_t get_line(char **lineptr, size_t *n, FILE *stream)

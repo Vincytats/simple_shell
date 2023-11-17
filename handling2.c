@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * aux_help_env - 
- * Return: 
+ * aux_help_env - displays the help message for the env command
+ * Return: void
  */
 void aux_help_env(void)
 {
@@ -12,11 +12,12 @@ help = "Print the enviroment of the shell.\n";
 write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * aux_help_setenv -
- * Return: 
+ * aux_help_setenv -displays the help message for the setenv command
+ * Return: void
  */
 void aux_help_setenv(void)
 {
+
 char *help = "setenv: setenv (const char *name, const char *value,";
 write(STDOUT_FILENO, help, _strlen(help));
 help = "int replace)\n\t";
@@ -25,8 +26,8 @@ help = "Add a new definition to the environment\n";
 write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * aux_help_unsetenv -
- * Return: 
+ * aux_help_unsetenv -displays the message for the unsetenv command
+ * Return: void
  */
 void aux_help_unsetenv(void)
 {
@@ -38,8 +39,8 @@ write(STDOUT_FILENO, help, _strlen(help));
 
 
 /**
- * aux_help_general - 
- * Return: 
+ * aux_help_general - displays the general help message
+ * Return: void
  */
 void aux_help_general(void)
 {
@@ -59,8 +60,8 @@ help = "unsetenv [variable]\n";
 write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * aux_help_exit - 
- * Return: 
+ * aux_help_exit - display the help message for the exit command
+ * Return: void
  */
 void aux_help_exit(void)
 {
